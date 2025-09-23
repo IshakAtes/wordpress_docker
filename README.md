@@ -9,20 +9,14 @@
 This repository contains a minimal WordPress + MySQL setup using Docker Compose.  
 The purpose is to provide a reproducible, easy-to-use environment for running a personal WordPress blog.
 
-Repository contents:
-- `.gitignore` – ignore unnecessary files
-- `docker-compose.yaml` – container setup
-- `README.md` – documentation
-
 ## Quickstart
 ### Requirements
-- Docker
-- Docker Compose
+- Docker & Docker Compose
 
 ### Steps
 1. Clone this repository  
 ```bash
-git clone <repo-url>
+git clone https://github.com/IshakAtes/wordpress_docker.git
 cd wordpress-docker
 ```
 
@@ -32,6 +26,7 @@ MYSQL_DATABASE=wordpress
 MYSQL_USER=wp_user
 MYSQL_PASSWORD=wp_pass
 MYSQL_ROOT_PASSWORD=root_pass
+WORDPRESS_DB_HOST=db:3306
 ```
 
 3. Start the containers:
