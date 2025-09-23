@@ -1,2 +1,62 @@
-# wordpress_docker
-A minimal reproducible setup to run a WordPress blog using Docker Compose. Includes a WordPress service, a MySQL database service, persistent volumes, and environment-based configuration. Designed as a learning project to quickly deploy and manage WordPress without manual installation.
+# WordPress Docker Setup
+
+## Table of Contents
+1. [About](#about)
+2. [Quickstart](#quickstart)
+3. [Usage](#usage)
+
+## About
+This repository contains a minimal WordPress + MySQL setup using Docker Compose.  
+The purpose is to provide a reproducible, easy-to-use environment for running a personal WordPress blog.
+
+Repository contents:
+- `.gitignore` – ignore unnecessary files
+- `docker-compose.yaml` – container setup
+- `README.md` – documentation
+
+## Quickstart
+### Requirements
+- Docker
+- Docker Compose
+
+### Steps
+1. Clone this repository  
+```bash
+git clone <repo-url>
+cd wordpress-docker
+```
+
+2. Create a .env file in the project root:
+``` env
+MYSQL_DATABASE=wordpress
+MYSQL_USER=wp_user
+MYSQL_PASSWORD=wp_pass
+MYSQL_ROOT_PASSWORD=root_pass
+```
+
+3. Start the containers:
+``` bash
+docker compose up -d
+```
+
+4. Open `http://localhost:8080` and complete the WordPress setup.
+
+
+## Usage
+
+**Persistency:**
+- Data is stored in Docker volumes db_data and wordpress_data. Restarting or stopping containers will not remove data.
+
+**Configuration:**
+- Change environment variables in `.env` to customize database name, user, and passwords.
+- To run WordPress on another port, change the `8080:80` mapping in `docker-compose.yaml`.
+
+**Maintenance:**
+- Stop services: `docker compose down`
+- Restart services: `docker compose up -d`
+- Remove all data (reset): `docker compose down -v`
+
+**Security Notes**
+- Do not commit your `.env` file with credentials.
+- Use strong passwords.
+- Run on a secure server (firewall, HTTPS via reverse proxy recommended).
