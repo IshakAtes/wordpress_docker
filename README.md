@@ -1,5 +1,8 @@
 # WordPress Docker Setup
 
+**Guide**:<br>
+[Link to Pdf Checklist](https://github.com/IshakAtes/wordpress_docker/blob/988a9956ce0a28dd5155a18497beed856d5ea06d/Wordpress%20Checkliste.pdf)<br><br>
+
 ## Table of Contents
 1. [About](#about)
 2. [Quickstart](#quickstart)
@@ -38,7 +41,7 @@ WORDPRESS_DB_PASSWORD=wp_pass
 docker compose up -d
 ```
 
-4. Open `http://localhost:8080` and complete the WordPress setup.
+4. Open `http://<IP_ADRESS>:8080` and complete the WordPress setup.
 
 
 ## Usage
