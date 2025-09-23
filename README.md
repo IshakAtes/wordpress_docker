@@ -26,7 +26,11 @@ MYSQL_DATABASE=wordpress
 MYSQL_USER=wp_user
 MYSQL_PASSWORD=wp_pass
 MYSQL_ROOT_PASSWORD=root_pass
+
 WORDPRESS_DB_HOST=db:3306
+WORDPRESS_DB_NAME=wordpress
+WORDPRESS_DB_USER=wp_user
+WORDPRESS_DB_PASSWORD=wp_pass
 ```
 
 3. Start the containers:
