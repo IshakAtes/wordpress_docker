@@ -17,7 +17,7 @@ services:
     container_name: wordpress_app
     restart: always
     ports:
-      - "8080:80"
+      - "${SERVER_PORT}:${WORDPRESS_CONTAINER_PORT}"
     env_file:
       - .env
     volumes:

@@ -25,15 +25,7 @@ cd wordpress-docker
 
 2. Create a .env file in the project root:
 ``` env
-MYSQL_DATABASE=wordpress
-MYSQL_USER=wp_user
-MYSQL_PASSWORD=wp_pass
-MYSQL_ROOT_PASSWORD=root_pass
-
-WORDPRESS_DB_HOST=db:3306
-WORDPRESS_DB_NAME=wordpress
-WORDPRESS_DB_USER=wp_user
-WORDPRESS_DB_PASSWORD=wp_pass
+cp example.env .env
 ```
 
 3. Start the containers:
@@ -50,8 +42,7 @@ docker compose up -d
 - Data is stored in Docker volumes db_data and wordpress_data. Restarting or stopping containers will not remove data.
 
 **Configuration:**
-- Change environment variables in `.env` to customize database name, user, and passwords.
-- To run WordPress on another port, change the `8080:80` mapping in `docker-compose.yaml`.
+- Change environment variables in `.env` to customize database name, user, password, and server port mapping.
 
 **Maintenance:**
 - Stop services: `docker compose down`
