@@ -1,4 +1,6 @@
 # WordPress Docker Setup
+This repository contains a minimal WordPress + MySQL setup using Docker Compose.  
+The purpose is to provide a reproducible, easy-to-use environment for running a personal WordPress blog.
 
 **Guide**:<br>
 [Link to Pdf Checklist](https://github.com/IshakAtes/wordpress_docker/blob/988a9956ce0a28dd5155a18497beed856d5ea06d/Wordpress%20Checkliste.pdf)<br><br>
@@ -7,10 +9,6 @@
 1. [About](#about)
 2. [Quickstart](#quickstart)
 3. [Usage](#usage)
-
-## About
-This repository contains a minimal WordPress + MySQL setup using Docker Compose.  
-The purpose is to provide a reproducible, easy-to-use environment for running a personal WordPress blog.
 
 ## Quickstart
 ### Requirements
@@ -23,7 +21,7 @@ git clone https://github.com/IshakAtes/wordpress_docker.git
 cd wordpress-docker
 ```
 
-2. Create a .env file in the project root:
+2. Create a `.env` file in the project root:
 ``` env
 cp example.env .env
 ```
@@ -39,7 +37,7 @@ docker compose up -d
 ## Usage
 
 **Persistency:**
-- Data is stored in Docker volumes db_data and wordpress_data. Restarting or stopping containers will not remove data.
+- Data is stored in the Docker volumes `db_data` and `wordpress_data`. Restarting or stopping containers will not remove data.
 
 **Configuration:**
 - Change environment variables in `.env` to customize database name, user, password, and server port mapping.
