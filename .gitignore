@@ -1,0 +1,10 @@
+# Ignore environment files
+.env
+
+# Ignore docker volumes
+data/
+db_data/
+
+# Ignore OS junk
+.DS_Store
+Thumbs.db
